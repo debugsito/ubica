@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'DINPro';
+    src: url('DINPro-Bold.woff2') format('woff2'),
+        url('DINPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DINPro-CondBlack';
+    src: url('DINPro-CondBlack.woff2') format('woff2'),
+        url('DINPro-CondBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DINPro-CondBold';
+    src: url('DINPro-CondBold.woff2') format('woff2'),
+        url('DINPro-CondBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DINPro-CondRegular';
+    src: url('DINPro-CondRegular.woff2') format('woff2'),
+        url('DINPro-CondRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('DINPro-Light.woff2') format('woff2'),
+        url('DINPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('DINPro-Regular.woff2') format('woff2'),
+        url('DINPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

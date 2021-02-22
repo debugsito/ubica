@@ -1,0 +1,2 @@
+<link href="<?php echo base_url('public/'); ?>plugins/popup_video/video.popup.css" rel="stylesheet" type="text/css"/>
+<script src="<?php echo base_url('public/'); ?>plugins/popup_video/video.popup.js" type="text/javascript"></script>

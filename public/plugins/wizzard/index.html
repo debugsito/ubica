@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<head>
+	<title>jQuery Simple Form Plugin Demos</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="simpleform.css" />
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+	<div class="container">
+		<h1>jQuery Simple Form Plugin Demos</h1>
+		<form class="testform" id="testform" method="post">
+			<fieldset class="personal-data">
+				<div class="form-group">				
+					<label for="name">Full Name: <span class="required">*</span></label>
+					<input type="text" id="name" name="name" class="form-control" placeholder="John Smith" required autofocus="" />
+				</div>
+				<div class="form-group">
+					<label for="email-address">Email: <span class="required">*</span></label>
+					<input class="form-control" type="text" name="email" id="email" placeholder="example@email.com" />
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone:</label>
+					<input class="form-control" type="tel" name="phone" id="phone" placeholder="000-000-000"  />
+				</div>
+			</fieldset>
+
+			<fieldset class="address-data-inputs">
+				<div class="form-group">
+					<label for="house-id">Building Number:</label>
+					<input class="form-control" type="text" id="house-id" name="house-id" placeholder="1" required="" />
+				</div>
+				<div class="form-group">
+					<label for="street">Street: <span class="required">*</span></label>
+					<input class="form-control" type="text" id="street" name="street" placeholder="The Street" />
+				</div>
+				<div class="form-group">
+					<label for="town">Town:</label>
+					<input class="form-control" type="text" id="town" name="town" placeholder="A Town"/>
+				</div>
+				<div class="form-group">
+					<label for="county">County:</label>
+					<input class="form-control" type="text" id="county" name="county" placeholder="San Luis Obispo"/>
+				</div>
+				<div class="form-group">
+					<label for="postal-code">Postal Code:</label>
+					<input class="form-control" type="text" id="postal-code" name="postal-code" placeholder="93401" />
+				</div>
+			</fieldset>
+
+			<fieldset class="message-details">
+				<div class="form-group">
+					<label for="comments">Comments:</label>
+					<textarea class="form-control" name="comments" id="comments"></textarea>
+				</div>
+			</fieldset>
+
+			<div class="clear"></div>
+		</form>
+	</div>
+
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="simpleform.js"></script>
+
+	<script type="text/javascript">
+
+		
+
+		$(".testform").simpleform({
+			speed : 500,
+			transition : 'fade',
+			progressBar : true,
+			showProgressText : true,
+			validate: true
+		});
+
+		function validateForm(formID, Obj){			
+			Obj.validate(
+			{
+				submitHandler: function(form) {
+					alert("enviando");
+					return false;
+				}
+			});
+			
+			
+			return Obj.valid();
+		}
+	</script>
+	<script type="text/javascript">
+
+		
+		$.validator.setDefaults({
+			success: "valid",
+			onkeyup: false,
+			onclick: false,
+			errorElement: "span",
+			errorClass: "help-block",
+			highlight: function (element, errorClass, validClass) {
+				if (!$(element).hasClass('novalidation')) {
+					$(element).closest('.form-group').addClass('has-error');
+				}
+			},
+			unhighlight: function (element, errorClass, validClass) {
+				if (!$(element).hasClass('novalidation')) {
+					$(element).closest('.form-group').removeClass('has-error');
+				}
+			},
+			errorPlacement: function (error, element) {
+
+				if (element.parent('.input-group').length) {
+					error.insertAfter(element.parent());
+				}
+				else if (element.prop('type') === 'radio' && element.parent('.radio-inline').length) {
+					error.insertAfter(element.parent().parent());
+				}
+				else if (element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
+					error.appendTo(element.parent().parent());
+				}
+				else if (element.prop('type') === 'file') {
+					error.appendTo(element.parent().parent().parent().parent());
+				}
+				else {
+					error.insertAfter(element);
+				}
+			}
+		});
+
+	</script>
+
+</body>
+
+
+
+
+
+
+
+
+</html>

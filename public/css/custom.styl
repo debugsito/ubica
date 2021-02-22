@@ -1,0 +1,164 @@
+$black = #1A1A1A
+$cyan = #21ECC8
+$indigo = #6400DF
+$secondary = #497187
+
+$nexa		= 'Nexa'
+$nexaBold	= 'NexaBold'
+
+.nexa
+	font-family $nexa
+	&-bold
+		font-family $nexaBold
+
+sombra(size, transparencia)
+	-webkit-box-shadow 0px 0px size 1px rgba(0,0,0,transparencia)
+	-moz-box-shadow 0px 0px size 1px rgba(0,0,0,transparencia)
+	box-shadow 0px 0px size 1px rgba(0,0,0,transparencia)
+
+h2
+	font-family $nexaBold
+	margin-bottom 3em
+	
+.bg
+	&-black
+		background $black
+.btn
+	&-redondo
+		border-radius 50px
+
+.div-home
+	height 100vh
+
+for num in 5..20
+	.pt-{num}
+		padding-top unit(num,'rem')
+	.pb-{num}
+		padding-bottom unit(num,'rem')
+	.pl-{num}
+		padding-left unit(num,'rem')
+	.pr-{num}
+		padding-right unit(num,'rem')
+	.px-{num}
+		padding-right unit(num,'rem')
+		padding-left unit(num,'rem')
+	.py-{num}
+		padding-top unit(num,'rem')
+		padding-bottom unit(num,'rem')
+
+.laUnica
+	height 75vh
+	padding-top 5rem
+	padding-bottom 5rem
+	
+.link
+	&-none
+		text-decoration none
+		&:hover
+			text-decoration none
+	&-white
+		color white
+		&:hover
+			color $cyan
+	&-info
+		color $cyan
+		&:hover
+			color white
+
+#beneficios
+	position relative
+	.owl-nav
+		position absolute
+		top 45%
+		left -5px
+		right -5px
+		display flex
+		justify-content space-between
+		div
+			background $cyan
+			color white
+			width 25px
+			height 25px
+			display flex
+			justify-content center
+			align-items center
+			border-radius 50%
+	.slider
+		position relative
+		padding 1em
+		border-radius 15px
+		margin 10px
+		sombra(5px, 0.5)
+		min-height 200px
+		span
+			position absolute
+			top 10px
+			left 10px		
+			color white
+			background $indigo
+			width 25px
+			height 25px
+			display flex
+			justify-content center
+			align-items center
+			border-radius 50%
+			font-size 13px
+		h5
+			text-align center
+			max-width 80%
+			margin auto
+			padding-top 15px
+			padding-bottom 15px
+.p
+	&-relative
+		position relative
+
+.bienvenido
+	min-width 500px
+	max-width 500px
+	position relative
+	z-index 4
+	@media(max-width 768px)
+		max-width 100%
+		min-width initial
+		padding-bottom 8em
+	&-text
+		font-size 4.33em
+		text-align justify
+		@media(max-width 768px)
+			font-size 2.3em
+	&-parrafo
+		font-size 1.35em
+.img-banner
+	position absolute
+	z-index 1
+	bottom 0
+	right 0
+	width 50%
+	transition all 0.5s ease
+	@media(max-width 992px)
+		width 65%
+		transition all 0.5s ease
+	@media(max-width 768px)
+		width 95%
+		transition all 0.5s ease
+		
+.detalles
+	display flex
+	margin-bottom 3.5em
+	@media(max-width 768px)
+		margin-bottom 2.5em
+	.icono
+		background $indigo
+		min-width 65px
+		min-height 65px
+		max-height 65px
+		border-radius 50%
+		color white
+		display flex
+		justify-content center
+		align-items center
+	.detalle
+		margin-left 1em
+		h5
+			font-weight 600
