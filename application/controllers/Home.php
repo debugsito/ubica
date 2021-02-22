@@ -52,7 +52,7 @@ class Home extends CI_Controller {
             "owl-carousel" => $this->load->view('plugins/owl-carousel', '', true)
         ];
 
-        ubicaVista('pages/v_homefilter', $data);
+        ubicaVista('pages/v_homeabout', $data);
     }
 
 	public function registro(){

@@ -637,6 +637,7 @@ h2 {
 body{
     background-color: #fafafa;
 }
+
 .Panel {
     width: 100%;
     max-width: 600px;
@@ -711,6 +712,8 @@ body{
 .Tab:hover > a {
     color: #222;
 }
+
+
 input[type="text"],
 select.form-control {
     background: transparent;
@@ -772,10 +775,13 @@ select.form-control:focus {
     background-color: #21ECC8;
     color: white;
 }
+
 .hr-cyan{
     border: 1px solid #21ECC8;
 }
-
+.card_estamoscontigo{
+    margin-top: -90px;
+}
 .card-horizontal {
     display: flex;
     flex: 1 1 auto;
@@ -788,6 +794,9 @@ select.form-control:focus {
 }
 .card_img{
     width: 75px;
+}
+.card_img_estamos{
+
 }
 .card-border-round{
     border: 0 !important;
@@ -832,6 +841,7 @@ select.form-control:focus {
     z-index: 2;
     text-align: left;
     background-color: white;
+    box-shadow:0 1px 3px 1px grey;
     border-radius: 50%;
     outline: none;
     top: -7px;
@@ -863,8 +873,54 @@ select.form-control:focus {
     height: 18px;
 }
 
+
 .display {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.tab-nav-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.tab1-c , .tab2-c, .tab3-c, .tab4-c{display:none;}
+
+ul li {
+    display: inline;
+    text-align: center;
+}
+
+.tabs_ul{
+    margin: 0;
+    display: block;
+}
+.tabs_ul > li{
+    width: 45%;
+    display: inline-block;
+}
+
+.two:hover ~ hr {
+    margin-left: 50%;
+    background: #21ECC8;
+}
+
+hr {
+    height: .25rem;
+    width: 50%;
+    margin: 0;
+    background: #21ECC8;
+    border: none;
+    transition: .3s ease-in-out;
+}
+.container-vertical {
+    position: relative;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

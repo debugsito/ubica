@@ -40,3 +40,11 @@ $('#rangeMax').on('input', function(e) {
         'right': (100 - calcLeftPosition(newValue)) + '%'
     });
 });
+$('.tab-content-wrapper > div').eq(0).show();
+$('.tab-nav-wrapper ul li a').click(function(){
+    $('.tab-content-wrapper > div').hide();
+    $('.tab-content-wrapper > div').eq($(this).parent().index()).show();
+});
+$('.closeLink').click( function(e) {
+    e.preventDefault();
+});
